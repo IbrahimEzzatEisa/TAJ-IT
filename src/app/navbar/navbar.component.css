@@ -1,0 +1,18 @@
+.bg-light {
+    background-color: #4b6584!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: sans-serif;
+    float: right;
+}
+
+.fa-user:before {
+    color: whitesmoke;
+}
+
+.fa-building-o:before {
+    color: whitesmoke;
+}

@@ -1,0 +1,75 @@
+.btn-block {
+    display: block;
+    width: 100%;
+    color: #dcdde1;
+    font-size: 20px;
+}
+
+.bg-dark {
+    background-color: #fed330!important;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 20px;
+    color: #dcdde1;
+    text-align: center;
+    background: linear-gradient(190deg, #353b48, #95afc0);
+}
+
+.btn:hover {
+    background: linear-gradient(1900deg, #487eb0, #40739e);
+    color: #dcdde1;
+}
+
+span {
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.text {
+    color: white;
+    font-size: 20px bold;
+    text-align: center!important;
+}
+
+input.ng-touched.ng-invalid {
+    border-color: rgb(248, 170, 170);
+}
+
+div.validation-error {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: rgba(126, 71, 71, 0.933);
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #b5d3f0;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    color: #0a3d62;
+    text-align: center !important;
+    font-size: 20px;
+}

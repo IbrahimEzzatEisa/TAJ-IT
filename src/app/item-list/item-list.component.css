@@ -1,0 +1,15 @@
+.scrollit {
+    overflow: scroll;
+    height: 100px;
+}
+
+thead {
+    background-color: #636e72;
+    text-align: center;
+    color: white;
+}
+
+tbody {
+    text-align: center;
+    background-color: #b2bec3;
+}

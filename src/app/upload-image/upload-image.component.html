@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col s8 offset-2">
+            <div class="card-panel teal lighten-2">
+                <h4 class="center white-text">صوره المنتج</h4>
+            </div>
+            <form #Photo=ngForm (ngSubmit)="OnSubmit(Photo)">
+
+                <img [src]="imageUrl" style="width:250px;height:200px">
+                <input type="file" #Photo accept="image/*" (change)="handleFileInput($event.target.files)" placeholder="أضف صوره">
+                <button type="submit" class="btn-large btn-submit ">أضافة</button>
+            </form>
+        </div>
+    </div>
+</div>

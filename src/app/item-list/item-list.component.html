@@ -1,0 +1,32 @@
+<div>
+    <input style="background-color: #dcdde1 ; border-radius: 3px; border-color: greenyellow" class="form-control text-center" type="text" name="search" [(ngModel)]="searchText" autocomplete="on" placeholder=" بحث">
+
+</div>
+<table class="table table-hover">
+    <thead>
+        <th></th>
+        <th>أنتهاء الصلاحية</th>
+        <th>صورة المنتج</th>
+        <th>السعر</th>
+        <th>اسم المنتج</th>
+        <th>م</th>
+
+    </thead>
+    <tbody class="scrollit">
+
+        <tr *ngFor="let item of service.list">
+            <td>
+                <button (click)="onDelete(item.ItemId)" class="btn btn-sm btn-outline-danger">X</button>
+            </td>
+            <td data-toggle="modal" data-id="2" data-target="#modalPoll-1" (click)="populateForm(item)">{{item.ExpireDate | date:'yyyy/MM/dd'}}</td>
+            <td data-toggle="modal" data-id="2" data-target="#modalPoll-1" (click)="populateForm(item)"><img src="{{item.Photo}}" style="width: 50px; height: 50px;"> </td>
+            <td data-toggle="modal" data-id="2" data-target="#modalPoll-1" (click)="populateForm(item)">{{item.Price}}</td>
+            <td data-toggle="modal" data-id="2" data-target="#modalPoll-1" (click)="populateForm(item)">{{item.ItemName}}</td>
+            <td data-toggle="modal" data-id="2" data-target="#modalPoll-1" (click)="populateForm(item)">{{item.ItemId}} </td>
+
+        </tr>
+
+
+
+    </tbody>
+</table>

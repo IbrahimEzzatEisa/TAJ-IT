@@ -1,0 +1,62 @@
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalPoll-1"> أضافه أصناف</button>
+
+<!-- Modal: modalPoll -->
+<div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+
+                <h2 class="form text-center"> بيانات الصنف </h2>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+
+                    <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+                        <input type="hidden" name="ItemId" #ItemId="ngModel" [(ngModel)]="service.formData.ItemId">
+                        <div class="form-row ">
+                            <div class="form-group ">
+                                <label>السعر</label>
+                                <input name="Price" #Price="ngModel" [(ngModel)]="service.formData.Price" class="form-control text-center" required>
+                                <div class="validation-error" *ngIf="Price.invalid && Price.touched">يجب أدخال البيانات</div>
+
+                            </div>
+                            <div class="form-group ">
+                                <label class="text-center">اسم الصنف</label>
+                                <input name="ItemName" #ItemName="ngModel" [(ngModel)]="service.formData.ItemName" class="form-control text-center" required>
+                                <div class="validation-error" *ngIf="ItemName.invalid && ItemName.touched"> يجب أدخال البيانات</div>
+                            </div>
+                            <!-- <div class="form-group ">
+                                <img src="Photo" style="width:250px;height:200px">
+                                <input type='file' name="Photo" #Photo="ngModel" [(ngModel)]="service.formData.Photo" (change)="handleFileInput($event.target.files)" #Photo accept="image/*" class="form-control text-center" required>
+                            </div> -->
+
+
+                            <div class="form-group ">
+                                <label>تاريخ أنتهاء الصلاحية</label>
+                                <input type=" date " name="ExpireDate" #ExpireDate="ngModel" [(ngModel)]="service.formData.ExpireDate" class="form-control text-center" required>
+                                <div class="validation-error " *ngIf="ExpireDate.invalid && ExpireDate.touched "> يجب أدخال البيانات</div>
+
+                            </div>
+                            <div class="form-group ">
+                                <app-upload-image></app-upload-image>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group ">
+                            <button type="submit " [disabled]="form.invalid " class="btn btn-lg btn-block ">أضافة</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
